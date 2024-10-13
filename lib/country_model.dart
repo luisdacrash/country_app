@@ -164,7 +164,7 @@ class CountryModel {
     Country toCountryEntity() => Country(
       name : name.nativeName.spa.common,
       capital : capital.first,
-      flagUrl : flag.toString(),
+      flagUrl : flags.png,
       population : population.toString(),
     );
 }
