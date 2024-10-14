@@ -8,9 +8,9 @@ class CountryProvider extends ChangeNotifier{
   
   final getCountry = GetCountry();
 
-  Future<void> provideCountry() async{
+  Future<void> provideCountry(String pais) async{
     
-    country = await getCountry.getCountryApi();
+    country = await getCountry.getCountryApi(pais);
 
     notifyListeners();
   }

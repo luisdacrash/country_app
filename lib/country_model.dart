@@ -162,7 +162,7 @@ class CountryModel {
     };
     
     Country toCountryEntity() => Country(
-      name : name.nativeName.spa.common,
+      name : name.nativeName.nameTranslater.common,
       capital : capital.first,
       flagUrl : flags.png,
       population : population.toString(),
@@ -434,18 +434,18 @@ class Name {
 }
 
 class NativeName {
-    final Translation spa;
+    final Translation nameTranslater;
 
     NativeName({
-        required this.spa,
+        required this.nameTranslater,
     });
 
     factory NativeName.fromJson(Map<String, dynamic> json) => NativeName(
-        spa: Translation.fromJson(json["spa"]),
+        nameTranslater: Translation.fromJson(json[json.keys.first]),
     );
 
     Map<String, dynamic> toJson() => {
-        "spa": spa.toJson(),
+        "spa": nameTranslater.toJson(),
     };
 }
 
