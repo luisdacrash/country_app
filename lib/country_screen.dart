@@ -27,14 +27,24 @@ class CountryView extends StatelessWidget{
   Widget build(BuildContext context)  {
 
     final countryProvider = context.watch<CountryProvider>();
-
-    final List<Country> countryList = countryProvider.countryList;
     
-    final Country country = countryList[0];
+    final Country country = countryProvider.country;
 
     return Column(
       children: [
-        Image.network(country.flagUrl)
+        Center(
+          child: Image.network(country.flagUrl)
+        ),
+        Center(
+          child: Text("Nombre: ${country.name}")
+        ),
+        Center(
+          child: Text("Capital: ${country.capital}")
+        ),
+        Center(
+          child: Text("Poblacion: ${country.population}")
+        )
+        
       ],
     );
   }

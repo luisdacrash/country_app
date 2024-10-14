@@ -4,15 +4,13 @@ import 'package:flutter/material.dart';
 
 class CountryProvider extends ChangeNotifier{
 
-  List<Country> countryList = [];
+  late Country country;
   
   final getCountry = GetCountry();
 
   Future<void> provideCountry() async{
     
-    final country = await getCountry.getCountryApi();
-
-    countryList.add(country);
+    country = await getCountry.getCountryApi();
 
     notifyListeners();
   }
