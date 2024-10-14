@@ -8,7 +8,7 @@ class GetCountry{
   Future<Country> getCountryApi() async {
     final response = await dio.get("https://restcountries.com/v3.1/name/spain");
 
-    final countryModel = CountryModel.fromJsonMap(response.data);
+    final CountryModel countryModel = CountryModel.fromJsonMap(response.data);
     
     return countryModel.toCountryEntity();
    

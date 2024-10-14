@@ -28,8 +28,6 @@ class CountryView extends StatelessWidget{
 
     final countryProvider = context.watch<CountryProvider>();
 
-    countryProvider.provideCountry();
-
     final List<Country> countryList = countryProvider.countryList;
     
     final Country country = countryList[0];
