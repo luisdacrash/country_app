@@ -2,6 +2,7 @@ import 'package:country_app/country.dart';
 import 'package:country_app/country_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:country_app/text_box.dart';
 
 class CountryScreen extends StatelessWidget {
   const CountryScreen({super.key});
@@ -43,8 +44,8 @@ class CountryView extends StatelessWidget{
         ),
         Center(
           child: Text("Poblacion: ${country.population}")
-        )
-        
+        ),
+        const TextBox()
       ],
     );
   }

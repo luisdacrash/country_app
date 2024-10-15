@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-      providers: [ChangeNotifierProvider(create: (_) => CountryProvider()..provideCountry("Germany"))],
+      providers: [ChangeNotifierProvider(create: (_) => CountryProvider()..provideCountry("Spain"))],
       
       child: MaterialApp(
       
